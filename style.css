@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    transition: 1s ease-in-out;
+}
+body{
+    font-family: 'BBH Bogle';
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: sans-serif
+}
+
+.logo-con{
+    flex: 1;
+
+}
+.logo{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: red;
+}
+
+
+.menu-con{
+    flex: 6;
+}
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+.menu-list-item{
+    margin-right: 50px;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+
+.profile-con{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.profile-text-con{
+    margin: 0 20px;
+}
+
+
+.profile-pic{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+}
+
+
+.toggle-icon{
+    color: rgb(255, 183, 0);
+    transition: 1s ease-in-out;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    transition: 1s ease-in-out;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+    transition: 1s ease-in-out;
+}
+
+.container{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+.content-container{
+    margin-left:50px ;
+}
+.featured-movies{
+    height: 50vh;
+    padding: 50px;
+    
+}
+
+.featured-title{
+    width: 200px;
+
+}
+
+.featured-desc{
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+}
+
+.featured-button{
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px ;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.movie-list-cont{
+    padding: 0 20px;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+    
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+
+
+.movie-list-item-img{
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.movie-list-item-title{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc{
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button{
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: .5;
+    cursor: pointer;
+}
+
+
+.container.active{
+    background-color: white;
+    transition: 1s ease-in-out;
+}
+
+.movie-list-title.active{
+    color: black;
+    transition: 1s ease-in-out;
+}
+
+
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+    transition: 1s ease-in-out;
+    
+}
+
+.sidebar.active{
+    background-color: white;
+    transition: 1s ease-in-out;
+}
+.left-menu-icon.active{
+    color: black;
+    transition: 1s ease-in-out;
+}
+
+.toggle.active{
+    background-color: black;
+    transition: 1s ease-in-out;
+}
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+    transition: 1s ease-in-out;
+}
+
+@media only screen and (max-width: 940px){
+    .menu-con{
+        display: none;
+    }
+}
+
+
